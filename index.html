@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="shortcut icon" href="./SVG/Logo.svg" type="image/x-icon">
+    <title>GetPet</title>
+</head>
+<body>
+    <header>
+        <div class="Logo">
+        <img src="./SVG/Logo.svg" alt="Logo">
+        <h1>GetPet</h1>
+        </div>
+
+        <ul class="links">
+            <li>Home</li>
+            <li>Sobre</li>
+            <li>Contato</li>
+        </ul>
+    </header>
+
+    <!-- Caixinhas com as outras páginas -->
+    <div class="container_box">
+        <div class="box">
+            <a href="">Adestramento</h2></a>
+        </div>
+        <div class="box">
+            <a href="">Veterinários</h2></a>
+        </div>
+        <div class="box">
+            <a href="">Quiz</h2></a>
+        </div>
+        <div class="box">
+            <a href="">Produtos</h2></a>
+        </div>
+        <div class="box">
+            <a href="">Adotar</h2></a>
+        </div>
+    </div>
+    
+    <!-- Slider -->
+     <div class="slider">
+       <h5>Temporario!</h5>
+     </div>
+
+     <!-- Onde ficaram os circulo com os filtros -->
+     <section class="container_circulo">
+        <div class="circulo" onclick="toggleCaixa(this)">
+            <!-- Colocar um icone posteriormente -->
+            <div class="caixa" style="display: none;">
+                Conteúdo da caixa 1
+            </div>
+        </div>
+    
+        <div class="circulo" onclick="toggleCaixa(this)">
+            <!-- Colocar um icone posteriormente -->
+            <div class="caixa" style="display: none;">
+                Conteúdo da caixa 2
+            </div>
+        </div>
+    
+        <div class="circulo" onclick="toggleCaixa(this)">
+            <!-- Colocar um icone posteriormente -->
+            <div class="caixa" style="display: none;">
+                Conteúdo da caixa 3
+            </div>
+        </div>
+    
+        <div class="circulo" onclick="toggleCaixa(this)">
+            <!-- Colocar um icone posteriormente -->
+            <div class="caixa" style="display: none;">
+                Conteúdo da caixa 4
+            </div>
+        </div>
+    
+        <div class="circulo" onclick="toggleCaixa(this)">
+            <!-- Colocar um icone posteriormente -->
+            <div class="caixa" style="display: none;">
+                Conteúdo da caixa 5
+            </div>
+        </div>
+    </section>
+
+    <script src="./JS/circulo.js"></script>
+</body>
+</html>

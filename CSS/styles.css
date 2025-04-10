@@ -1,0 +1,145 @@
+/* Importando as fontes */
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+/* Estilização Padrão */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #FAF8EB;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 40px;
+    background-color: #F2EFBD;
+    height: 70px;
+}
+
+/* Imagem da Logo e o Texto */
+.Logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.Logo h1{
+    font-family: "Rammetto One";
+    font-weight: 300;
+}
+
+/* Os links das paginas */
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    font-family: "Mukta Vaani";
+    list-style: none;
+    font-size: 20px;
+}
+
+.links li {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+/* Animação para linha criando uma linha pseudo invisivel */
+.links li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #71AB3E;
+    transition: width 0.3s ease;
+}
+
+.links li:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+}
+
+.links li:hover::after {
+    width: 100%; /* Faz a linha aparecer completamente */
+}
+
+/* As caixinhas com as outras páginas */
+.container_box{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.box{
+    background-color:#D4D955;
+    height: 50px;
+    width: 250px;
+    border-radius: 15px; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.box a{
+    color:#000;
+    margin-top: 15px;
+    text-decoration: none;
+    font-family: "Mukta Vaani";
+    font-weight: 500;
+}
+
+/* Slider */
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F26B5E;
+    width: 50opx;
+    height: 250px;
+}
+
+.slider h5{
+    font-size: 50px;
+}
+
+/* Circulos */
+.container_circulo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 180px;
+    margin-bottom: 50px;
+}
+
+.circulo {
+    background-color: #71AB3E;
+    width: 105px;
+    height: 105px;
+    border-radius: 100%;
+    position: relative; /* Adicionado para posicionamento da caixa */
+    cursor: pointer; /* Mostra que é clicável */
+}
+
+.caixa {
+    position: absolute;
+    top: 120px; /* Distância do círculo */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 150px;
+    text-align: center;
+    z-index: 10;
+}
