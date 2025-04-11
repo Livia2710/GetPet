@@ -76,8 +76,8 @@ header{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: 50px;
-    gap: 30px;
+    margin-top: 70px;
+    gap: 20px;
     margin-bottom: 50px;
 }
 .box{
@@ -96,21 +96,121 @@ header{
     font-family: "Mukta Vaani";
     font-weight: 500;
 }
-
-/* Slider */
-.slider{
+/* ____________________________________________________________ */
+/* Container dos Slider */
+/* .container_slider{
     display: flex;
-    justify-content: center;
+    flex-direction: ;
+} */
+
+/* Slider 1*/
+.slider_1 {
+    display: flex;
+    justify-content: space-between; 
     align-items: center;
-    background-color: #F26B5E;
-    width: 50opx;
-    height: 250px;
+    background-color: #F26B5E; 
+    height: 300px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.slider h5{
+
+.slider_1 h5 {
     font-size: 50px;
+    color: #fff; 
+    margin: 0; 
+    font-family: "Mukta Vaani", sans-serif; 
+    font-weight: 600; 
 }
 
+.slider_1 p {
+    color: #fff;
+    font-family: "Mukta Vaani", sans-serif;
+    font-weight: 500;
+    font-size: 18px; 
+    margin-top: 10px; 
+}
+
+/* Image */
+.slider_1 img {
+    margin-top: 77px;
+    
+}
+
+/* Slider 2*/
+.slider_2 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #365914; 
+    height: 300px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.slider_2 h5 {
+    font-size: 50px;
+    color: #fff; 
+    margin: 0; 
+    font-family: "Mukta Vaani", sans-serif; 
+    font-weight: 600; 
+}
+
+.slider_2 p {
+    color: #fff;
+    font-family: "Mukta Vaani", sans-serif;
+    font-weight: 500;
+    font-size: 18px; 
+    margin-top: 10px; 
+}
+
+/* Image */
+.slider_2 img {
+    margin-top: 90px;
+    
+    
+}
+
+/* Slider 3*/
+.slider_3{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #71AB3E; 
+    height: 300px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.slider_3 h5 {
+    font-size: 50px;
+    color: #fff; 
+    margin: 0; 
+    font-family: "Mukta Vaani", sans-serif; 
+    font-weight: 600; 
+}
+
+.slider_3 p {
+    color: #fff;
+    font-family: "Mukta Vaani", sans-serif;
+    font-weight: 500;
+    font-size: 18px; 
+    margin-top: 10px; 
+}
+
+/* Image */
+.slider_3 img {
+    margin-top: 109px;
+    
+}
 /* Circulos */
 .container_circulo {
     display: flex;
