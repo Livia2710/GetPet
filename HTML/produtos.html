@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/produtos.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <div class="Logo">
+        <a href="../index.html"><img src="../SVG/Logo.svg" alt="Logo"></a>
+        <h1>GetPet</h1>
+        </div>
+
+        <ul class="links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Contato</a></li>
+        </ul>
+    </header>
+
+    <!-- ________________________________________________________ -->
+    <!-- Produtos -->
+
+    <section class="categorias">
+        <h3>Produtos</h3>
+        <div class="container">
+        <!-- Cachorro -->
+
+        <!-- Ração -->
+          <div class="card" data-animal="cachorro" >
+            <h2>Ração Cachorro</h2>
+            <p>New Dog </p>
+            <img class="capa" src="/img/racao_cachorro.png" alt="">
+            <span class="preco">R$ 13,28</span>
+            <div class="oculto">
+                <p>Animal: Cachorro</p>
+                <p>Cattegoria: Adulto</p>
+            </div>
+            <button class="toggle-info">Ver mais</button>
+          </div>
+
+          <!-- Gato -->
+           <!-- Ração -->
+          <div class="card" data-animal="gato">
+            <h2>Ração Gato</h2>
+            <p>GranPlus </p>
+            <img class="capa" src="/img/racao_gato.png" alt="">
+            <span class="preco">R$ 125,72</span>
+            <div class="oculto">
+                <p>Animal: Gato</p>
+                <p>Categoria: Adulto</p>
+            </div>
+            <button class="toggle-info">Ver mais</button>
+          </div>
+
+          <!-- Peixe -->
+           <!-- Ração -->
+          <div class="card" data-animal="peixe">
+            <h2>Ração Peixe</h2>
+            <p>Nutricon Nutriflakes</p>
+            <img class="capa" src="/img/racao_peixe.png" alt="">
+            <span class="preco">R$ 108, 99</span>
+            <div class="oculto">
+                <p>Animal: Peixe</p>
+                <p>Categoria: Tropical</p>
+            </div>
+            <button class="toggle-info">Ver mais</button>
+          </div>
+
+          <!-- Passaro -->
+           <!-- Ração -->
+          <div class="card" data-animal="ave">
+            <h2>Ração Passáro</h2>
+            <p>Gold Mix</p>
+            <img class="capa" src="/img/racao_ave.png" alt="">  
+            <span class="preco">R$ 15, 50</span>
+            <div class="oculto">
+                <p>Animal: Passáro</p>
+                <p>Categoria: Azulão</p>
+            </div>
+            <button class="toggle-info">Ver mais</button>
+          </div>
+
+          <!-- Outros -->
+           <!-- Ração -->
+          <div class="card" data-animal="outros">
+            <h2>Ração Coelho</h2>
+            <p>Presence</p>
+            <img class="capa" src="/img/racao_coelho.png" alt="">
+            <span class="preco">R$ 28, 49</span>
+            <div class="oculto">
+                <p>Animal: Coelho</p>
+                <p>Categoria: Adulto</p>
+            </div>
+            <button class="toggle-info">Ver mais</button>
+          </div>
+        </div>
+      </section>
+
+      <script src="../JS/filtro_produtos.js"></script>
+      <Script src="../JS/produtos.js"></Script>
+    
+</body>
+</html>

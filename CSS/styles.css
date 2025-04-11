@@ -23,6 +23,7 @@ header{
     height: 70px;
 }
 
+
 /* Imagem da Logo e o Texto */
 .Logo{
     display: flex;
@@ -50,6 +51,13 @@ header{
     padding-bottom: 4px;
     transition: all 0.3s ease;
     cursor: pointer;
+}
+
+.links li a{
+    color:#000;
+    margin-top: 15px;
+    text-decoration: none;
+    font-family: "Mukta Vaani";
 }
 /* Animação para linha criando uma linha pseudo invisivel */
 .links li::after {
@@ -82,12 +90,19 @@ header{
 }
 .box{
     background-color:#D4D955;
-    height: 50px;
+    height: 70px;
     width: 250px;
     border-radius: 15px; 
     display: flex; 
     justify-content: center; 
+    text-align: center;
+    cursor: pointer;
 }
+
+/* .box:hover {
+    transform: translateY(-30px);
+    transition: 3s ease;
+}  */
 
 .box a{
     color:#000;
@@ -95,151 +110,246 @@ header{
     text-decoration: none;
     font-family: "Mukta Vaani";
     font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
 }
 /* ____________________________________________________________ */
-/* Container dos Slider */
-/* .container_slider{
-    display: flex;
-    flex-direction: ;
-} */
-
-/* Slider 1*/
-.slider_1 {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    background-color: #F26B5E; 
-    height: 300px;
-    margin-left: 70px;
-    margin-right: 70px;
-    padding-left: 50px;
-    padding-right: 50px;
+/* Container principal */
+.container_slider {
+  position: relative;
+  max-width: 100%;
 }
 
+/* Wrapper para os slides */
+.slider_wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  margin-right: 250px;
+}
+
+/* Estilo geral dos slides */
+.slide {
+  flex: 0 0 100%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* Slide ativo */
+.slide.active {
+  display: flex;
+}
+
+/* Slider 1 */
+.slider_1 {
+  background-color: #F26B5E;
+}
 
 .slider_1 h5 {
-    font-size: 50px;
-    color: #fff; 
-    margin: 0; 
-    font-family: "Mukta Vaani", sans-serif; 
-    font-weight: 600; 
+  font-size: 50px;
+  color: #fff;
+  margin: 0;
+  font-family: "Mukta Vaani";
+  font-weight: 600;
 }
 
 .slider_1 p {
-    color: #fff;
-    font-family: "Mukta Vaani", sans-serif;
-    font-weight: 500;
-    font-size: 18px; 
-    margin-top: 10px; 
+  color: #fff;
+  font-family: "Mukta Vaani";
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-/* Image */
 .slider_1 img {
-    margin-top: 77px;
-    
+  margin-top: 77px;
+  margin-right: -50px;
 }
 
-/* Slider 2*/
+/* Slider 2 */
 .slider_2 {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    background-color: #365914; 
-    height: 300px;
-    margin-left: 70px;
-    margin-right: 70px;
-    padding-left: 50px;
-    padding-right: 50px;
+  background-color: #365914;
 }
-
 
 .slider_2 h5 {
-    font-size: 50px;
-    color: #fff; 
-    margin: 0; 
-    font-family: "Mukta Vaani", sans-serif; 
-    font-weight: 600; 
+  font-size: 50px;
+  color: #fff;
+  margin: 0;
+  font-family: "Mukta Vaani";
+  font-weight: 600;
 }
 
 .slider_2 p {
-    color: #fff;
-    font-family: "Mukta Vaani", sans-serif;
-    font-weight: 500;
-    font-size: 18px; 
-    margin-top: 10px; 
+  color: #fff;
+  font-family: "Mukta Vaani";
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-/* Image */
 .slider_2 img {
-    margin-top: 90px;
-    
-    
+  margin-top: 90px;
 }
 
-/* Slider 3*/
-.slider_3{
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    background-color: #71AB3E; 
-    height: 300px;
-    margin-left: 70px;
-    margin-right: 70px;
-    padding-left: 50px;
-    padding-right: 50px;
+/* Slider 3 */
+.slider_3 {
+  background-color: #71AB3E;
 }
-
 
 .slider_3 h5 {
-    font-size: 50px;
-    color: #fff; 
-    margin: 0; 
-    font-family: "Mukta Vaani", sans-serif; 
-    font-weight: 600; 
+  font-size: 50px;
+  color: #fff;
+  margin: 0;
+  font-family: "Mukta Vaani";
+  font-weight: 600;
 }
 
 .slider_3 p {
-    color: #fff;
-    font-family: "Mukta Vaani", sans-serif;
-    font-weight: 500;
-    font-size: 18px; 
-    margin-top: 10px; 
+  color: #fff;
+  font-family: "Mukta Vaani";
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-/* Image */
 .slider_3 img {
-    margin-top: 109px;
-    
+  margin-top: 109px;
+  margin-right: -50px;
 }
+
+/* Indicadores */
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #fff;
+}
+/* _______________________________________________________ */
 /* Circulos */
-.container_circulo {
+.categorias {
+    margin: 20px 0;
+    padding: 0 70px;
+    margin-bottom: 500px;
+  }
+  
+  .categorias h3 {
+    font-family: "Rammetto One";
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .circulos {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 50px;
-    gap: 180px;
-    margin-bottom: 50px;
-}
+    gap: 215px;
+    
+  }
+  
+  .circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* .circulo:hover {
+    transform: scale(1.1);
+  } */
 
-.circulo {
-    background-color: #71AB3E;
-    width: 105px;
-    height: 105px;
-    border-radius: 100%;
-    position: relative; /* Adicionado para posicionamento da caixa */
-    cursor: pointer; /* Mostra que é clicável */
-}
-
-.caixa {
+  .caixa-secundaria{
+    display: none;
     position: absolute;
-    top: 120px; /* Distância do círculo */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    width: 150px;
-    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    background-color: #365914;
+  }
+
+  .caixa-secundaria.active {
+    display: block;
+  }
+
+  /* Estilo das caixas */
+  .caixa {
+    display: none; /* Inicialmente escondida */
+    position: absolute;
+    background-color: #365914;
+    border-radius: 10px;
+    padding: 10px;
+    width: 85vw;
+    margin-left: -70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
+    margin-top: 80px; /* Para aparecer abaixo dos círculos */
+  }
+  
+  .caixa.active {
+    display: block; /* Mostra a caixa quando ativa */
+  }
+  
+  .caixa h4 {
+    font-family: "Mukta Vaani";
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #365914;
+  }
+  
+  .caixa p {
+    font-family: "Mukta Vaani";
+    font-size: 16px;
+    color: #333;
+  }
+
+#box2 {
+    background-color: #71AB3E;
+    /* margin-left: -680px; */
+    margin-left: -385px;
+    width: 1050px;
+}
+
+#box3{
+    background-color: #D4D955;
+    margin-left: -1300px;
+}
+
+#box4{
+    margin-left: -1985px;
+    background-color: #F2EFBD;
+    width: 1050px;
+}
+
+#box5 {
+    margin-left: -2555px;
+    background-color: #F26B5E;
+}
+
+/* ______________________________________________________ */
+.produto{
+    color:#000;
+    text-decoration: none;
+    font-family: "Mukta Vaani";
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
 }

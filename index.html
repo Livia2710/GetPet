@@ -10,101 +10,132 @@
 <body>
     <header>
         <div class="Logo">
-        <img src="./SVG/Logo.svg" alt="Logo">
+        <a href="index.html"><img src="./SVG/Logo.svg" alt="Logo"></a>
         <h1>GetPet</h1>
         </div>
 
         <ul class="links">
-            <li>Home</li>
-            <li>Sobre</li>
-            <li>Contato</li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Contato</a></li>
         </ul>
     </header>
 
     <!-- Caixinhas com as outras páginas -->
     <div class="container_box">
         <div class="box">
-            <a href="">Adestramento</h2></a>
+            <a href="./HTML/adestramento.html">Adestramento</a>
         </div>
         <div class="box">
-            <a href="">Veterinários</h2></a>
+            <a href="">Veterinários</a>
         </div>
         <div class="box">
-            <a href="">Quiz</h2></a>
+            <a href="">Quiz</a>
         </div>
         <div class="box">
-            <a href="">Produtos</h2></a>
+            <a href="./HTML/produtos.html" target="_blank">Produtos</a>
         </div>
         <div class="box">
             <a href="">Adotar</h2></a>
         </div>
     </div>
     
-    <!-- Slider -->
-     <div class="container_slider">
-     <div class="slider_1">
-        <div class="texto_banner">
-        <h5>Adote hoje!</h5>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis porro, repellat modi, rerum, atque vero laborum quasi aliquam omnis veniam assumenda veritatis at voluptatem! Rem beatae voluptatibus repudiandae repellendus?</p>
-       </div>
-       <img src="./img/Cachorrinho.png" alt="">
-     </div>
+    <div class="container_slider">
+        <div class="slider_wrapper">
+          <div class="slider_1 slide active">
+            <div class="texto_banner">
+              <h5>Adote hoje!</h5>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis porro, repellat modi, rerum, atque vero laborum quasi aliquam omnis veniam assumenda veritatis at voluptatem! Rem beatae voluptatibus repudiandae repellendus?</p>
+            </div>
+            <img src="./img/Cachorrinho.png" alt="">
+          </div>
+      
+          <div class="slider_2 slide">
+            <img src="./img/Coelho.png" alt="" width="500px">
+            <div class="texto_banner">
+              <h5>Cuida de mim!</h5>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis porro, repellat modi, rerum, atque vero laborum quasi aliquam omnis veniam assumenda veritatis at voluptatem! Rem beatae voluptatibus repudiandae repellendus?</p>
+            </div>
+          </div>
+      
+          <div class="slider_3 slide">
+            <div class="texto_banner">
+              <h5>Adote hoje!</h5>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis porro, repellat modi, rerum, atque vero laborum quasi aliquam omnis veniam assumenda veritatis at voluptatem! Rem beatae voluptatibus repudiandae repellendus?</p>
+            </div>
+            <img src="./img/Gatinho.png" alt="">
+          </div>
+        </div>
+        <!-- Indicadores (opcional) -->
+        <div class="indicators">
+          <span class="indicator active" data-slide="0"></span>
+          <span class="indicator" data-slide="1"></span>
+          <span class="indicator" data-slide="2"></span>
+        </div>
+      </div>
 
-     <div class="slider_2">
-        <img src="./img/Coelho.png" alt="" width="500px">
-        <div class="texto_banner">
-        <h5>Cuida de mim!</h5>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis porro, repellat modi, rerum, atque vero laborum quasi aliquam omnis veniam assumenda veritatis at voluptatem! Rem beatae voluptatibus repudiandae repellendus?</p>
-       </div>
-       
-     </div>
+        <!-- __________________________________________________ -->
+      <!-- Categorias -->
+      <section class="categorias">
+        <h3>Categorias</h3>
+        <div class="circulos">
+          <div class="circulo" data-box="box1" data-box-sec="box1-sec" style="background-color: #365914;"></div>
+          <div class="circulo" data-box="box2" data-box-sec="box2-sec" style="background-color: #71AB3E;"></div>
+          <div class="circulo" data-box="box3" data-box-sec="box3-sec" style="background-color: #D4D955;"></div>
+          <div class="circulo" data-box="box4" data-box-sec="box4-sec" style="background-color: #F2EFBD;"></div>
+          <div class="circulo" data-box="box5" data-box-sec="box5-sec" style="background-color: #F26B5E;"></div>
+        </div>
+      
+        <!-- Caixas que aparecem ao clicar -->
+         <div class="caixa-secundaria" id="box1-sec">
+            <div class="caixa" id="box1">
+            <h4>Categoria 1</h4>
+            <a href="./HTML/produtos.html?animal=cachorro" class="produto">🐶 Cachorros</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="acessorio">Roupas e Acessórios</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="racao">Ração e Petiscos</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="coleira">Coleira, Guias e Peitorais</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="racao">Caminha e Casinha</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="acessorio">Proteção e Adestramento</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="coleira">Medicamento</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="racao">Higiene e Limpeza</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="acessorio">Transporte</a>
+            <a href="./HTML/produtos.html?animal=cachorro&categoria=racao" class="produto" data-animal="cachorro" data-categoria="coleira">Brinquedos</a>
+            </div>
+        </div>
 
-     <div class="slider_3">
-        <div class="texto_banner">
-        <h5>Adote hoje!</h5>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga nobis porro, repellat modi, rerum, atque vero laborum quasi aliquam omnis veniam assumenda veritatis at voluptatem! Rem beatae voluptatibus repudiandae repellendus?</p>
+        <div class="caixa-secundaria" id="box2-sec" style="background-color: #71AB3E;">
+            <div class="caixa" id="box2">
+            <h4>Categoria 2</h4>
+            <a href="./HTML/produtos.html?animal=gato">🐱 Gatos</a>
+            
+            </div>
        </div>
-       <img src="./img/Gatinho.png" alt="">
-     </div>
+
+       <div class="caixa-secundaria" id="box3-sec" style="background-color: #D4D955;">
+        <div class="caixa" id="box3">
+          <h4>Categoria 3</h4>
+          <a href="./HTML/produtos.html?animal=peixe">🐟 Peixes</a>
+        </div>
     </div>
-     <!-- Onde ficaram os circulo com os filtros -->
-     <section class="container_circulo">
-        <div class="circulo" onclick="toggleCaixa(this)">
-            <!-- Colocar um icone posteriormente -->
-            <div class="caixa" style="display: none;">
-                Conteúdo da caixa 1
-            </div>
-        </div>
-    
-        <div class="circulo" onclick="toggleCaixa(this)">
-            <!-- Colocar um icone posteriormente -->
-            <div class="caixa" style="display: none;">
-                Conteúdo da caixa 2
-            </div>
-        </div>
-    
-        <div class="circulo" onclick="toggleCaixa(this)">
-            <!-- Colocar um icone posteriormente -->
-            <div class="caixa" style="display: none;">
-                Conteúdo da caixa 3
-            </div>
-        </div>
-    
-        <div class="circulo" onclick="toggleCaixa(this)">
-            <!-- Colocar um icone posteriormente -->
-            <div class="caixa" style="display: none;">
-                Conteúdo da caixa 4
-            </div>
-        </div>
-    
-        <div class="circulo" onclick="toggleCaixa(this)">
-            <!-- Colocar um icone posteriormente -->
-            <div class="caixa" style="display: none;">
-                Conteúdo da caixa 5
-            </div>
-        </div>
-    </section>
 
+    <div class="caixa-secundaria" id="box4-sec" style="background-color: #F2EFBD;">
+        <div class="caixa" id="box4">
+          <h4>Categoria 4</h4>
+          <a href="./HTML/produtos.html?animal=ave">🐦 Aves</a>
+        </div>
+    </div>
+
+    <div class="caixa-secundaria" id="box5-sec" style="background-color: #F26B5E;">
+        <div class="caixa" id="box5">
+            <h4>Categoria 5</h4>
+            <a href="./HTML/produtos.html?animal=outros">🦎 Outros Animais</a>
+        </div>
+    </div>
+
+      </section>
+
+      <!-- Os links para o JS -->
     <script src="./JS/circulo.js"></script>
+    <script src="./JS/slider.js"></script>
 </body>
 </html>

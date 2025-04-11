@@ -1,0 +1,156 @@
+/* Importando as fontes */
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+/* Estilização Padrão */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #FAF8EB;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 40px;
+    background-color: #F2EFBD;
+    height: 70px;
+}
+
+
+/* Imagem da Logo e o Texto */
+.Logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.Logo h1{
+    font-family: "Rammetto One";
+    font-weight: 300;
+}
+
+/* Os links das paginas */
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    font-family: "Mukta Vaani";
+    list-style: none;
+    font-size: 20px;
+}
+
+.links li {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.links li a{
+    color:#000;
+    margin-top: 15px;
+    text-decoration: none;
+    font-family: "Mukta Vaani";
+}
+/* Animação para linha criando uma linha pseudo invisivel */
+.links li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #71AB3E;
+    transition: width 0.3s ease;
+}
+
+.links li:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+}
+
+.links li:hover::after {
+    width: 100%; /* Faz a linha aparecer completamente */
+}
+/* ________________________________________________ */
+.cursos {
+    margin: 20px 0;
+    padding: 0 70px;
+  }
+  
+.cursos h3 {
+    font-family: "Rammetto One";
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Container dos Cards */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+    
+}
+
+/* Estilização dos Cards */
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+    width: 440px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;   
+    transition: transform 0.3s ease-in-out;
+    font-family: "Mukta Vaani";
+}
+
+.info {
+    font-family: "Rammetto One";
+    font-weight: 200;
+    font-size: 10px;
+    gap: 150px;
+    text-align: start;
+    margin-left: 15px;
+}
+
+.card p{
+    margin-top: -10px;
+    color: #1b1b1b;
+    margin-bottom: 40px;
+    padding-right: 25px;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card h2{
+    margin-top: 5px;
+    margin-bottom: 25px;
+
+
+}
+.capa {
+    width: 170px;
+    margin-top: 5px;
+}
+
+.btn_info{
+    background-color: transparent;
+    border: 2px solid #71AB3E;
+    color: #71AB3E;
+    border-radius: 15px;
+    width: 150px;
+    height: 30px;
+}
