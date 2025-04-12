@@ -1,0 +1,42 @@
+[
+    {
+      "animal": "cachorro",
+      "categoria": "racao",
+      "titulo": "Ração Cachorro",
+      "subtitulo": "New Dog",
+      "preco": "R$ 13,28",
+      "imagem": "/img/racao_cachorro.png"
+    },
+    {
+      "animal": "gato",
+      "categoria": "racao",
+      "titulo": "Ração Gato",
+      "subtitulo": "Kitty Junior",
+      "preco": "R$ 15,50",
+      "imagem": "/img/racao_gato.png"
+    },
+    {
+      "animal": "peixe",
+      "categoria": "tropical",
+      "titulo": "Ração Peixe",
+      "subtitulo": "Nutricon Nutriflakes",
+      "preco": "R$ 108,99",
+      "imagem": "/img/racao_peixe.png"
+    },
+    {
+      "animal": "ave",
+      "categoria": "azulão",
+      "titulo": "Ração Passáro",
+      "subtitulo": "Gold Mix",
+      "preco": "R$ 15,50",
+      "imagem": "/img/racao_ave.png"
+    },
+    {
+        "animal": "outros",
+        "categoria": "coelho",
+        "titulo": "Ração Coelho",
+        "subtitulo": "GPresence",
+        "preco": "R$ 28, 49",
+        "imagem": "/img/racao_coelho.png"
+    }
+  ]

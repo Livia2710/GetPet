@@ -1,99 +1,87 @@
+async function carregarProdutos() {
+  try {
+    // Carrega o arquivo JSON
+    const resposta = await fetch('../produtos.json');
+    const produtos = await resposta.json();
+    const container = document.querySelector('.container');
 
-  // Seleciona todos os botões "Ver mais"
-  const toggleButtons = document.querySelectorAll('.toggle-info');
-
-  toggleButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Encontra a div "oculto" dentro do mesmo card
-      const card = button.closest('.card');
-      const oculto = card.querySelector('.oculto');
-
-      // Alterna a visibilidade
-      oculto.style.display = oculto.style.display === 'block' ? 'none' : 'block';
-
-      // (Opcional) Muda o texto do botão
-      button.textContent = oculto.style.display === 'block' ? 'Ver menos' : 'Ver mais';
-    });
-  });
-
-
-// Lista de produtos
-const produtos = [
-    {
-      nome: "Ração Cachorro",
-      imagem: "/img/racao_cachorro.png",
-      preco: "R$ 21,55",
-      animal: "cachorro",
-      categoria: "racao",
-      marca: "Dante"
-    },
-    {
-      nome: "Ração Gato",
-      imagem: "/img/racao_gato.png",
-      preco: "R$ 19,99",
-      animal: "gato",
-      categoria: "racao",
-      marca: "Mia"
-    },
-    // Adicione todos os produtos aqui
-  ];
-  
-  // Função para criar os cards
-  function gerarCards() {
-    const container = document.getElementById("produtos-container");
-  
+    // Cria todos os cards
     produtos.forEach(produto => {
-      const card = document.createElement("div");
-      card.className = "card produto";
-      card.dataset.animal = produto.animal;
-      card.dataset.categoria = produto.categoria;
-  
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.setAttribute('data-animal', produto.animal);
+      card.setAttribute('data-categoria', produto.categoria);
+
       card.innerHTML = `
-        <h2>${produto.nome}</h2>
-        <img class="capa" src="${produto.imagem}" alt="">
-        <p>${produto.marca}</p>
+        <h2>${produto.titulo}</h2>
+        <p>${produto.subtitulo}</p>
+        <img class="capa" src="${produto.imagem}" alt="${produto.titulo}">
         <span class="preco">${produto.preco}</span>
+        <div class="oculto">
+          <p>Animal: ${produto.animal.charAt(0).toUpperCase() + produto.animal.slice(1)}</p>
+          <p>Categoria: ${produto.categoria.charAt(0).toUpperCase() + produto.categoria.slice(1)}</p>
+        </div>
+        <button class="toggle-info">Ver mais</button>
       `;
-  
+
       container.appendChild(card);
     });
-  }
-  
-  // Quando a página carregar, gerar os cards e aplicar os filtros
-  document.addEventListener("DOMContentLoaded", () => {
-    gerarCards();
-  
-    // Filtros (você pode manter o código que já tinha)
+
+    // Adiciona eventos aos botões "Ver mais"
+    const toggleButtons = document.querySelectorAll('.toggle-info');
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const card = button.closest('.card');
+        const oculto = card.querySelector('.oculto');
+        oculto.style.display = oculto.style.display === 'block' ? 'none' : 'block';
+        button.textContent = oculto.style.display === 'block' ? 'Ver menos' : 'Ver mais';
+      });
+    });
+
+    // Aplica a filtragem baseada na URL
     const urlParams = new URLSearchParams(window.location.search);
-    const animal = urlParams.get("animal");
-    const categoria = urlParams.get("categoria");
-  
-    const titulo = document.getElementById("titulo-animal");
-    const categoriasDiv = document.getElementById("categorias");
-  
-    if (animal) {
-      titulo.textContent = `Produtos para ${animal}`;
-      categoriasDiv.style.display = "block";
-  
-      document.querySelectorAll('#categorias a').forEach(link => {
-        const cat = link.dataset.categoria;
-        link.href = `produtos.html?animal=${animal}&categoria=${cat}`;
+    const animalSelecionado = urlParams.get('animal');
+    const categoriaSelecionada = urlParams.get('categoria');
+
+    if (animalSelecionado) {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        // Esconde os cards que não correspondem ao animal
+        card.style.display = card.dataset.animal === animalSelecionado ? '' : 'none';
       });
-  
-      document.querySelectorAll('.produto').forEach(produto => {
-        produto.style.display = (produto.dataset.animal === animal) ? 'block' : 'none';
-      });
+
+      // Atualiza o título, se existir
+      const titulo = document.getElementById('titulo-animal');
+      if (titulo) {
+        titulo.textContent = `Produtos para ${animalSelecionado.charAt(0).toUpperCase() + animalSelecionado.slice(1)}`;
+      }
+
+      // Mostra a div de categorias, se existir
+      const categoriasDiv = document.getElementById('categorias');
+      if (categoriasDiv) {
+        categoriasDiv.style.display = 'block';
+        // Atualiza os links de categorias
+        document.querySelectorAll('#categorias a').forEach(link => {
+          const cat = link.dataset.categoria;
+          link.href = `./produtos.html?animal=${animalSelecionado}&categoria=${cat}`;
+        });
+      }
     }
-  
-    if (categoria) {
-      document.querySelectorAll('.produto').forEach(produto => {
-        if (
-          produto.dataset.animal !== animal ||
-          produto.dataset.categoria !== categoria
-        ) {
-          produto.style.display = 'none';
+
+    if (categoriaSelecionada) {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        // Esconde os cards que não correspondem à categoria
+        if (card.dataset.animal !== animalSelecionado || card.dataset.categoria !== categoriaSelecionada) {
+          card.style.display = 'none';
         }
       });
     }
-  });
-  
+
+  } catch (erro) {
+    console.error('Erro ao carregar os produtos:', erro);
+  }
+}
+
+// Chama a função ao carregar a página
+carregarProdutos();
