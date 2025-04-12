@@ -78,36 +78,16 @@ header{
 .links li:hover::after {
     width: 100%; /* Faz a linha aparecer completamente */
 }
-/* ________________________________________ */
-/* Estilização do campo de busca */
-.busca {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-#busca-produto {
-    width: 300px;
-    padding: 10px;
-    border: 2px solid #365914;
-    border-radius: 15px;
-    font-size: 16px;
-    font-family: "Mukta Vaani", sans-serif;
-    outline: none;
-}
-
-#busca-produto::placeholder {
-    color: #484545;
-}
+/* ________________________________________________ */
 /* ________________________________________ */
 /*Produtos */
-.categorias {
+.veterinarios {
     margin: 20px 0;
     padding: 0 70px;
     margin-bottom: 500px;
 }
   
-.categorias h3 {
+.veterinarios h3 {
     font-family: "Rammetto One";
     font-weight: 300;
     font-size: 40px;
@@ -136,50 +116,4 @@ header{
     text-align: center;   
     transition: transform 0.3s ease-in-out;
     font-family: "Mukta Vaani";
-}
-
-.card p{
-    margin-top: -10px;
-    color: #484545;
-}
-
-.card:hover{
-    transform: scale(1.05);
-}
-
-.card h2{
-    margin: 10px 0;
-}
-
-.preco{
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
-}
-.capa {
-    width: 150px;
-    margin-top: 5px;
-}
-.oculto {
-    border: 1px solid #b5b5b5;
-    border-radius: 15px;
-    width: 170px;
-    padding: 15px;
-    text-align: start;
-    display: none;
-}
-
-.oculto p {
-    padding-bottom: -10px;
-    border-bottom: 1px solid #b5b5b5;
-}
-.toggle-info{
-    width: 95px;
-    background-color: transparent;
-    border: 2px solid #365914;
-    border-radius: 15px;
-    color: #365914;
-    margin: 15px;
-    height: 30px;
-
 }

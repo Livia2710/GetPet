@@ -146,11 +146,20 @@ header{
     margin-top: 5px;
 }
 
+/* Estilização do botão */
 .btn_info{
     background-color: transparent;
     border: 2px solid #71AB3E;
     color: #71AB3E;
+    transition: transform 0.3s ease-in-out;
     border-radius: 15px;
     width: 150px;
     height: 30px;
+}
+
+.btn_info:hover{
+    background-color: #71AB3E;
+    color: #ffffff;
+    transform: scale(1.05);
+    cursor: pointer;
 }

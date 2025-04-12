@@ -8,12 +8,60 @@
       "imagem": "/img/racao_cachorro.png"
     },
     {
+        "animal": "cachorro",
+        "categoria": "racao",
+        "titulo": "Ração Cachorro",
+        "subtitulo": "Gran Plus",
+        "preco": "R$ 175,90",
+        "imagem": "/img/Racao_Cachorro_GranPlus.png"
+    },
+    {
+        "animal": "cachorro",
+        "categoria": "racao",
+        "titulo": "Ração Cachorro",
+        "subtitulo": "Guabi Natural",
+        "preco": "R$ 365,31",
+        "imagem": "/img/Racao_Cachorro_Guabi.png"
+    },
+    {
+        "animal": "cachorro",
+        "categoria": "racao",
+        "titulo": "Ração Cachorro",
+        "subtitulo": "Origens Class",
+        "preco": "R$ 183,10",
+        "imagem": "/img/Racao_Cachorro_OrigensClass.png"
+    },
+    {
+        "animal": "cachorro",
+        "categoria": "racao",
+        "titulo": "Ração Cachorro",
+        "subtitulo": "Pedigree",
+        "preco": "R$ 126,90",
+        "imagem": "/img/Racao_Cachorro_Pedigree.png"
+    },
+    {
+        "animal": "cachorro",
+        "categoria": "roupa",
+        "titulo": "Roupa Cachorro",
+        "subtitulo": "Não sei",
+        "preco": "R$ 187,90",
+        "imagem": "/img/roupa_cachorro.png"
+    },
+    {
       "animal": "gato",
       "categoria": "racao",
       "titulo": "Ração Gato",
       "subtitulo": "Kitty Junior",
       "preco": "R$ 15,50",
       "imagem": "/img/racao_gato.png"
+    },
+    {
+        "animal": "gato",
+        "categoria": "roupa",
+        "titulo": "Roupa Cachorro",
+        "subtitulo": "Não sei",
+        "preco": "R$ 187,90",
+        "imagem": "/img/gato_roupa.png"
     },
     {
       "animal": "peixe",

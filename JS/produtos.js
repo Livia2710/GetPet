@@ -38,7 +38,7 @@ async function carregarProdutos() {
       });
     });
 
-    // Aplica a filtragem baseada na URL
+    // Aplica a filtragem por URL
     const urlParams = new URLSearchParams(window.location.search);
     const animalSelecionado = urlParams.get('animal');
     const categoriaSelecionada = urlParams.get('categoria');
@@ -46,21 +46,17 @@ async function carregarProdutos() {
     if (animalSelecionado) {
       const cards = document.querySelectorAll('.card');
       cards.forEach(card => {
-        // Esconde os cards que não correspondem ao animal
         card.style.display = card.dataset.animal === animalSelecionado ? '' : 'none';
       });
 
-      // Atualiza o título, se existir
       const titulo = document.getElementById('titulo-animal');
       if (titulo) {
         titulo.textContent = `Produtos para ${animalSelecionado.charAt(0).toUpperCase() + animalSelecionado.slice(1)}`;
       }
 
-      // Mostra a div de categorias, se existir
       const categoriasDiv = document.getElementById('categorias');
       if (categoriasDiv) {
         categoriasDiv.style.display = 'block';
-        // Atualiza os links de categorias
         document.querySelectorAll('#categorias a').forEach(link => {
           const cat = link.dataset.categoria;
           link.href = `./produtos.html?animal=${animalSelecionado}&categoria=${cat}`;
@@ -71,10 +67,37 @@ async function carregarProdutos() {
     if (categoriaSelecionada) {
       const cards = document.querySelectorAll('.card');
       cards.forEach(card => {
-        // Esconde os cards que não correspondem à categoria
         if (card.dataset.animal !== animalSelecionado || card.dataset.categoria !== categoriaSelecionada) {
           card.style.display = 'none';
         }
+      });
+    }
+
+    // Adiciona a filtragem por escrito
+    const buscaInput = document.getElementById('busca-produto');
+    if (buscaInput) {
+      buscaInput.addEventListener('input', () => {
+        const termo = buscaInput.value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+          // Verifica se o card já está filtrado por animal/categoria
+          const animal = card.dataset.animal;
+          const categoria = card.dataset.categoria;
+          const titulo = card.querySelector('h2').textContent.toLowerCase();
+          const subtitulo = card.querySelector('p').textContent.toLowerCase();
+
+          // Mostra o card apenas se corresponder ao termo e aos filtros da URL (se aplicável)
+          const correspondeBusca = termo === '' || 
+                                  titulo.includes(termo) || 
+                                  subtitulo.includes(termo) || 
+                                  animal.toLowerCase().includes(termo);
+
+          const correspondeUrl = (!animalSelecionado || animal === animalSelecionado) &&
+                                (!categoriaSelecionada || categoria === categoriaSelecionada);
+
+          card.style.display = correspondeBusca && correspondeUrl ? '' : 'none';
+        });
       });
     }
 
