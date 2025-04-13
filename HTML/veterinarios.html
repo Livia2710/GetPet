@@ -9,12 +9,12 @@
 <body>
     <header>
         <div class="Logo">
-        <a href="index.html"><img src="../SVG/Logo.svg" alt="Logo"></a>
+        <a href="../index.html"><img src="../SVG/Logo.svg" alt="Logo"></a>
         <h1>GetPet</h1>
         </div>
 
         <ul class="links">
-            <li><a href="./index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="">Sobre</a></li>
             <li><a href="">Contato</a></li>
         </ul>
@@ -22,19 +22,73 @@
 
     <section class="veterinarios">
         <h3>Veterinários</h3>
+        <div class="filtro">
+            <input type="text" id="busca-nome" placeholder="Digite o nome do veterinário">
+            <div class="filtro-icones">
+              <button class="filtro-btn" data-icone="todos">Todos</button>
+              <button class="filtro-btn" data-icone="silvestre">Silvestre</button>
+              <button class="filtro-btn" data-icone="clinico">Clínico</button>
+              <button class="filtro-btn" data-icone="exotico">Exótico</button>
+            </div>
+        </div>
         <div class="container">  
-            <div class="card" >
+            <div class="card" data-tipo="silvestre">
                 <div class="cima">
-                    <h2>Renata Gomez.</h2>
-                    <img class="foto" src="/img/foto_renataGomez.png" alt="">
+                    <h2 >Renata Gomez</h2>  
                 </div>
-               
-                <div class="ibaixo">
+                 <img class="foto" src="/img/foto_renataGomez.png" >
+                <div class="baixo">
                 <img src="/img/icone_silvestre.png" alt=""> 
-                <p>Amo bichinhos❤️. </p>
+                <p>Sobre mim: Sou apaixonada em veterinaria,, amo cuidar dos bixinho aia ai me contrataAmo bichinhos❤️. </p>
+                </div>
+            </div>
+
+            <div class="card" data-tipo="clinico">
+                <div class="cima">
+                    <h2>Laila Vieira</h2>  
+                </div>
+                 <img class="foto" src="/img/foto_renataGomez.png" >
+                <div class="baixo">
+                <img src="/img/icone_clinico.png" alt=""> 
+                <p>Sobre mim: Sou apaixonada em veterinaria,, amo cuidar dos bixinho aia ai me contrataAmo bichinhos❤️. </p>
+                </div>
+            </div>
+
+            <div class="card" data-tipo="silvestre" >
+                <div class="cima">
+                    <h2 >Giovanne Carvalho</h2>  
+                </div>
+                 <img class="foto" src="/img/foto_renataGomez.png" >
+                <div class="baixo">
+                <img src="/img/icone_silvestre.png" alt=""> 
+                <p>Sobre mim: Sou apaixonada em veterinaria,, amo cuidar dos bixinho aia ai me contrataAmo bichinhos❤️. </p>
+                </div>
+            </div>
+
+            <div class="card" data-tipo="exotico" >
+                <div class="cima">
+                    <h2> Adelaide Valença</h2>  
+                </div>
+                 <img class="foto" src="/img/foto_renataGomez.png" >
+                <div class="baixo">
+                <img src="/img/icone_exotico.png" alt=""> 
+                <p>Sobre mim: Sou apaixonada em veterinaria,, amo cuidar dos bixinho aia ai me contrataAmo bichinhos❤️. </p>
+                </div>
+            </div>
+
+            <div class="card" data-tipo="clinico" >
+                <div class="cima">
+                    <h2>Carla Rodriguez</h2>  
+                </div>
+                 <img class="foto" src="/img/foto_renataGomez.png" >
+                <div class="baixo">
+                <img src="/img/icone_clinico.png" alt=""> 
+                <p>Sobre mim: Sou apaixonada em veterinaria,, amo cuidar dos bixinho aia ai me contrataAmo bichinhos❤️. </p>
                 </div>
             </div>
         </div>
       </section>
+
+      <script src="../JS/filtro_vet.js"></script>
 </body>
 </html>

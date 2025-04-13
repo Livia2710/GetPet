@@ -1,0 +1,116 @@
+/* Importando as fontes */
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+/* Estilização Padrão */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #FAF8EB;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 40px;
+    background-color: #F2EFBD;
+    height: 70px;
+}
+
+
+/* Imagem da Logo e o Texto */
+.Logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.Logo h1{
+    font-family: "Rammetto One";
+    font-weight: 300;
+}
+
+/* Os links das paginas */
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    font-family: "Mukta Vaani";
+    list-style: none;
+    font-size: 20px;
+}
+
+.links li {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.links li a{
+    color:#000;
+    margin-top: 15px;
+    text-decoration: none;
+    font-family: "Mukta Vaani";
+}
+/* Animação para linha criando uma linha pseudo invisivel */
+.links li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #71AB3E;
+    transition: width 0.3s ease;
+}
+
+.links li:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+}
+
+.links li:hover::after {
+    width: 100%; /* Faz a linha aparecer completamente */
+}
+
+/* ________________________________________________ */
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.info h1{
+    font-family: "Rammetto One";
+    font-weight: 700;
+    font-size: 42px;
+}
+
+.info p{
+    font-family: "Mukta Vaani";
+    font-size: 30px;
+    margin-top: -25px;
+    margin-right: 200px;
+}
+
+.info button{
+    background-color: #F26B5E;
+    border: 2px solid #F26B5E;
+    color: #F2EFBD;
+    font-size: 15px;
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+}
+
+section img{
+    width: 100%;
+    opacity: 0.40;
+}

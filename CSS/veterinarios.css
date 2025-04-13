@@ -78,9 +78,56 @@ header{
 .links li:hover::after {
     width: 100%; /* Faz a linha aparecer completamente */
 }
+
+/*____________________________________________________ */
+.filtro {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+  
+#busca-nome {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #4a7a1e;
+    border-radius: 10px;
+    font-size: 16px;
+}
+  
+.filtro-icones {
+    display: flex;
+    gap: 10px;
+}
+  
+.filtro-btn {
+    padding: 5px 15px;
+    border: none;
+    background-color: #365914;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Mukta Vaani";
+}
+  
+.filtro-btn:hover {
+    background-color: #4a7a1e;
+}
+  
+.filtro-btn.ativo {
+    background-color: #D4D955;
+    color: #365914;
+}
+  
+/* Esconde cards não correspondentes */
+.card.escondido {
+    display: none;
+}
+
 /* ________________________________________________ */
-/* ________________________________________ */
-/*Produtos */
+/*Veterinarios */
 .veterinarios {
     margin: 20px 0;
     padding: 0 70px;
@@ -99,6 +146,7 @@ header{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-left: 0px;
     gap: 20px;
     padding-bottom: 20px;
     
@@ -109,11 +157,56 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
-    width: 250px;
-    border-radius: 10px;
+    background-color: #365914;
+    width: 260px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;   
     transition: transform 0.3s ease-in-out;
     font-family: "Mukta Vaani";
+    position: relative;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+
+.cima{
+    background-color: #365914;
+    color: #ffffff;
+    width: 260px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: -25px;
+
+    
+}
+
+.baixo{
+    background-color: #D4D955;
+    width: 260px;
+    margin-top: -25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+
+.baixo p{
+    padding: 15px;
+}
+
+.foto {
+    width: 100px;
+    z-index: 100;
+    padding-top: 20px;
+    border-radius: 35%;
+
+}
+
+.baixo img {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: -150px;
 }
