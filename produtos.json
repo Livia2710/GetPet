@@ -72,6 +72,14 @@
       "imagem": "/img/racao_peixe.png"
     },
     {
+      "animal": "peixe",
+      "categoria": "tropical",
+      "titulo": "Ração Peixe",
+      "subtitulo": "Nutricon Nutriflakes",
+      "preco": "R$ 108,99",
+      "imagem": "/img/racao_peixe.png"
+    },
+    {
       "animal": "ave",
       "categoria": "azulão",
       "titulo": "Ração Passáro",

@@ -20,7 +20,7 @@
 
   // Inicia o slider automaticamente
   function startSlider() {
-    setInterval(nextSlide, 7000); // Troca a cada 5 segundos
+    setInterval(nextSlide, 7000); // Troca a cada 7 segundos
   }
 
   // Mostra o primeiro slide ao carregar

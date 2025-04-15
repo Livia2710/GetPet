@@ -35,6 +35,11 @@ header{
     font-weight: 300;
 }
 
+.Logo img{
+    width: 75px;
+    margin-top: 10px;
+}
+
 /* Os links das paginas */
 .links{
     display: flex;

@@ -30,6 +30,11 @@ header{
     flex-direction: row;
 }
 
+.Logo img{
+  width: 75px;
+  margin-top: 10px;
+}
+
 .Logo h1{
     font-family: "Rammetto One";
     font-weight: 300;
