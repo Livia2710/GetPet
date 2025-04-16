@@ -265,8 +265,7 @@ header{
   
   .circulos {
     display: flex;
-    gap: 215px;
-    
+    gap: 310px;
   }
   
   .circulo {
@@ -303,7 +302,6 @@ header{
     padding: 10px;
     width: 85vw;
     margin-left: -70px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
     margin-top: 80px; /* Para aparecer abaixo dos círculos */
   }
@@ -328,25 +326,35 @@ header{
 
 #box2 {
     background-color: #71AB3E;
-    /* margin-left: -680px; */
-    margin-left: -385px;
+    margin-left: -480px;
     width: 1050px;
 }
 
 #box3{
     background-color: #D4D955;
-    margin-left: -1300px;
+    margin-left: -1675px;
+    width: 1670px;
 }
 
 #box4{
-    margin-left: -1985px;
+    margin-left: -2270px;
     background-color: #F2EFBD;
     width: 1050px;
 }
 
 #box5 {
-    margin-left: -2555px;
+    margin-left: -3262px;
     background-color: #F26B5E;
+}
+
+.container_links{
+    background-color: #F26B5E;
+   
+}
+
+.container_links a {
+    font-size: 25px;
+    padding-left: 50px;
 }
 
 /* ______________________________________________________ */
